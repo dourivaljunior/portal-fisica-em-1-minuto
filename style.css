@@ -1,70 +1,58 @@
 /* ========================= */
-/* RESET */
+/* style.css */
 /* ========================= */
 
 *{
+
   margin:0;
   padding:0;
+
   box-sizing:border-box;
+
+  font-family:
+  Arial,
+  Helvetica,
+  sans-serif;
 }
-
-
-/* ========================= */
-/* BODY */
-/* ========================= */
 
 body{
 
-  font-family: Arial, Helvetica, sans-serif;
-
-  background:
-  linear-gradient(
-    135deg,
-    #001a33,
-    #003366,
-    #004080
-  );
+  background:#07111f;
 
   color:white;
 
   min-height:100vh;
+
+  overflow-x:hidden;
+
+  position:relative;
 }
 
+/* FUNDO */
 
-/* ========================= */
+.background{
+
+  position:fixed;
+
+  width:100%;
+  height:100%;
+
+  top:0;
+  left:0;
+
+  z-index:-1;
+
+  background:
+  radial-gradient(
+    circle at top,
+    rgba(0,120,255,0.15),
+    transparent 70%
+  );
+}
+
 /* HEADER */
-/* ========================= */
 
-.topo{
-
-  text-align:center;
-
-  padding:50px 20px;
-
-}
-
-.topo h1{
-
-  font-size:3rem;
-
-  margin-bottom:15px;
-
-}
-
-.topo p{
-
-  font-size:1.2rem;
-
-  opacity:0.9;
-
-}
-
-
-/* ========================= */
-/* VIDEO SECTION */
-/* ========================= */
-
-.video-section{
+.main-header{
 
   width:100%;
 
@@ -72,91 +60,360 @@ body{
 
   justify-content:center;
 
-  padding:20px;
+  align-items:center;
 
+  padding:50px 20px 30px 20px;
 }
 
+/* HERO */
 
-/* ========================= */
-/* VIDEO BOX */
-/* ========================= */
+.hero-box{
 
-.video-box{
+  width:90%;
+
+  max-width:900px;
+
+  padding:35px 25px;
+
+  border-radius:28px;
+
+  text-align:center;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(30,60,114,0.85),
+    rgba(42,82,152,0.85)
+  );
+
+  border:
+  1px solid rgba(255,255,255,0.1);
+
+  box-shadow:
+  0 0 25px rgba(0,140,255,0.15);
+
+  backdrop-filter:blur(8px);
+}
+
+/* TITULOS */
+
+.hero-box h1{
+
+  font-size:3rem;
+
+  line-height:1.2;
+
+  margin-bottom:15px;
+
+  color:white;
+
+  text-align:center;
+}
+
+.hero-box h2{
+
+  font-size:1.2rem;
+
+  font-weight:300;
+
+  color:#d9e6ff;
+
+  text-align:center;
+}
+
+/* VIDEO */
+
+.video-section{
 
   width:100%;
 
-  max-width:1000px;
+  padding:20px;
 
-  background:#000;
+  text-align:center;
+}
 
-  border-radius:20px;
+.video-section h3{
+
+  margin-bottom:20px;
+
+  font-size:1.4rem;
+
+  color:#9cc7ff;
+
+  text-align:center;
+}
+
+.video-container{
+
+  width:90%;
+
+  max-width:950px;
+
+  margin:auto;
+
+  border-radius:22px;
 
   overflow:hidden;
 
   box-shadow:
-  0 0 30px rgba(0,0,0,0.5);
-
+  0 0 30px rgba(0,120,255,0.2);
 }
 
+.video-container iframe{
 
-/* ========================= */
+  width:100%;
+
+  height:520px;
+
+  border:none;
+}
+
+/* INTRO */
+
+.intro-section{
+
+  width:100%;
+
+  padding:50px 20px;
+
+  text-align:center;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+}
+
+.intro-section p{
+
+  font-size:1.3rem;
+
+  line-height:1.6;
+
+  margin-bottom:35px;
+
+  color:#d9e6ff;
+
+  max-width:700px;
+
+  text-align:center;
+}
+
+/* BOTÕES */
+
+button{
+
+  padding:16px 34px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #2b7cff,
+    #56a3ff
+  );
+
+  color:white;
+
+  font-size:1rem;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+button:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 0 20px rgba(0,120,255,0.45);
+}
+
+/* DESAFIOS */
+
+.challenge-section{
+
+  width:100%;
+
+  padding:30px 20px;
+
+  text-align:center;
+}
+
+.challenge-section h2{
+
+  margin-bottom:35px;
+
+  font-size:2rem;
+
+  color:#9cc7ff;
+}
+
+.challenge-card{
+
+  width:90%;
+
+  max-width:600px;
+
+  margin:auto;
+
+  padding:35px;
+
+  border-radius:24px;
+
+  background:
+  rgba(255,255,255,0.04);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  text-align:center;
+}
+
+.challenge-card h3{
+
+  margin-bottom:25px;
+
+  color:white;
+}
+
+/* DESAFIO */
+
+.challenge-container{
+
+  width:92%;
+
+  max-width:1000px;
+
+  margin:auto;
+
+  padding-bottom:60px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:30px;
+}
+
+/* BOX */
+
+.content-box{
+
+  width:100%;
+
+  padding:25px;
+
+  border-radius:24px;
+
+  background:
+  rgba(255,255,255,0.04);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  text-align:center;
+}
+
+.content-box h2{
+
+  margin-bottom:20px;
+
+  color:#9cc7ff;
+}
+
+/* IMAGEM QUESTÃO */
+
+.question-image{
+
+  width:100%;
+
+  border-radius:18px;
+
+  box-shadow:
+  0 0 20px rgba(0,120,255,0.15);
+}
+
+/* AUDIO */
+
+.audio-player{
+
+  width:100%;
+}
+
 /* VIDEO */
-/* ========================= */
 
 .video-player{
 
   width:100%;
 
+  border-radius:18px;
+}
+
+/* BOTÃO VOLTAR */
+
+.back-btn{
+
   display:block;
 
+  margin:40px auto;
 }
 
-
-/* ========================= */
-/* CONTEÚDO */
-/* ========================= */
-
-.conteudo{
-
-  text-align:center;
-
-  padding:50px 20px;
-
-}
-
-.conteudo h2{
-
-  font-size:2rem;
-
-  margin-bottom:20px;
-
-}
-
-.conteudo p{
-
-  font-size:1.1rem;
-
-  line-height:1.7;
-
-  max-width:800px;
-
-  margin:auto;
-
-}
-
-
-/* ========================= */
 /* FOOTER */
-/* ========================= */
 
 footer{
 
-  text-align:center;
+  width:100%;
 
   padding:30px;
 
-  margin-top:40px;
+  text-align:center;
 
-  background:rgba(0,0,0,0.3);
+  color:#d9e6ff;
+}
 
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+  .hero-box{
+
+    width:95%;
+
+    padding:28px 18px;
+  }
+
+  .hero-box h1{
+
+    font-size:2rem;
+  }
+
+  .hero-box h2{
+
+    font-size:1rem;
+  }
+
+  .video-container iframe{
+
+    height:240px;
+  }
+
+  .intro-section p{
+
+    font-size:1.1rem;
+  }
+
+  .challenge-section h2{
+
+    font-size:1.6rem;
+  }
 }
