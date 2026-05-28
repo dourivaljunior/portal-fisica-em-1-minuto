@@ -1,16 +1,93 @@
+<!-- ========================= -->
+<!-- index.html -->
+<!-- ========================= -->
+
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
-<body style="background:black;">
+<head>
 
-<video width="800" controls>
+  <meta charset="UTF-8">
 
-  <video controls autoplay muted loop>
-  <source src="https://www.youtube.com/shorts/m88EpgvufBM" type="video/mp4">
-</video>
-</video>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-</video>
+  <title>Portal Física em 1 Minuto</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- FUNDO -->
+  <div class="background-animation"></div>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="hero-box">
+
+      <h1>⚛ Portal Física em 1 Minuto</h1>
+
+      <h2>
+        Prof. Dourival Junior (Físico)
+      </h2>
+
+    </div>
+
+  </header>
+
+  <!-- VÍDEO -->
+
+  <section class="video-section">
+
+    <h3>🎥 Videoaula em Destaque</h3>
+
+    <div class="video-box">
+
+      <iframe
+        src="https://www.youtube.com/embed/m88EpgvufBM"
+        title="Video Aula"
+        frameborder="0"
+        allowfullscreen
+        loading="lazy">
+
+      </iframe>
+
+    </div>
+
+  </section>
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <p>
+      Aprenda Física de forma rápida,
+      visual e moderna.
+    </p>
+
+    <button onclick="openPage('fisica.html')">
+
+      Entrar
+
+    </button>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      📱 Contato: 71 98134-8237
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>
