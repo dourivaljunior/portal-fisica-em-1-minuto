@@ -1,91 +1,44 @@
-<!-- ========================= -->
-<!-- INDEX.HTML -->
-<!-- ========================= -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vídeo Aula</title>
 
-  <title>Portal Física em 1 Minuto</title>
+  <style>
 
-  <link rel="stylesheet" href="style.css">
+    body{
+      margin:0;
+      background:#000;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+    }
+
+    video{
+      width:90%;
+      max-width:1000px;
+      border-radius:20px;
+    }
+
+  </style>
+
 </head>
 
 <body>
 
-  <!-- ========================= -->
-  <!-- HEADER -->
-  <!-- ========================= -->
+  <video
+    autoplay
+    muted
+    loop
+    controls
+    playsinline>
 
-  <header class="topo">
+    <source src="VideoAula.mp4" type="video/mp4">
 
-    <h1>Portal Física em 1 Minuto</h1>
-
-    <p>
-      Aprenda Física de forma simples, rápida e visual.
-    </p>
-
-  </header>
-
-
-  <!-- ========================= -->
-  <!-- VÍDEO -->
-  <!-- ========================= -->
-
-  <section class="video-section">
-
-    <div class="video-box">
-
-      <video
-        class="video-player"
-        controls
-        autoplay
-        muted
-        loop
-        playsinline>
-
-        <!-- O vídeo deve estar na mesma pasta -->
-        <source src="VideoAula.mp4" type="video/mp4">
-
-        Seu navegador não suporta vídeo HTML5.
-
-      </video>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================= -->
-  <!-- CONTEÚDO -->
-  <!-- ========================= -->
-
-  <section class="conteudo">
-
-    <h2>Aula de Física</h2>
-
-    <p>
-      Explore conteúdos incríveis de Física com animações,
-      exemplos e exercícios resolvidos.
-    </p>
-
-  </section>
-
-
-  <!-- ========================= -->
-  <!-- RODAPÉ -->
-  <!-- ========================= -->
-
-  <footer>
-
-    <p>
-      © 2026 - Portal Física em 1 Minuto
-    </p>
-
-  </footer>
+  </video>
 
 </body>
 
