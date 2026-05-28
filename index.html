@@ -1,65 +1,92 @@
 <!-- ========================= -->
-<!-- index.html -->
+<!-- INDEX.HTML -->
 <!-- ========================= -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Portal Física em 1 Minuto</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="background-animation"></div>
+  <!-- ========================= -->
+  <!-- HEADER -->
+  <!-- ========================= -->
 
-<header>
+  <header class="topo">
 
-  <div class="hero-box">
+    <h1>Portal Física em 1 Minuto</h1>
 
-    <h1>⚛ Portal Física em 1 Minuto</h1>
-
-    <h2>Prof. Dourival Junior (Físico)</h2>
-
-  </div>
-
-</header>
-
-<section class="video-section">
-
-  <h3>
     <p>
-    Aprenda Física de forma rápida, visual e moderna.
-  </p>
-  </h3>
+      Aprenda Física de forma simples, rápida e visual.
+    </p>
 
- <!-- COLOQUE O ARQUIVO mp4 NA MESMA PASTA DO index.html -->
+  </header>
 
-<div class="video-box">
 
-  <video controls width="100%">
-    <source src="videoaula.mp4" type="video/mp4">
-    Seu navegador não suporta vídeo HTML5.
-  </video>
+  <!-- ========================= -->
+  <!-- VÍDEO -->
+  <!-- ========================= -->
 
-</div>
+  <section class="video-section">
 
-</section>
+    <div class="video-box">
 
-<section class="intro">
+      <video
+        class="video-player"
+        controls
+        autoplay
+        muted
+        loop
+        playsinline>
 
-  
+        <!-- O vídeo deve estar na mesma pasta -->
+        <source src="./videoaula.mp4" type="video/mp4">
 
-  <button onclick="openPage('fisica.html')">
-    Entrar no Portal
-  </button>
+        Seu navegador não suporta vídeo HTML5.
 
-</section>
+      </video>
 
-<footer>
-  <p>📱 Contato: 71 98134-8237</p>
-</footer>
+    </div>
 
-<script src="script.js"></script>
+  </section>
+
+
+  <!-- ========================= -->
+  <!-- CONTEÚDO -->
+  <!-- ========================= -->
+
+  <section class="conteudo">
+
+    <h2>Aula de Física</h2>
+
+    <p>
+      Explore conteúdos incríveis de Física com animações,
+      exemplos e exercícios resolvidos.
+    </p>
+
+  </section>
+
+
+  <!-- ========================= -->
+  <!-- RODAPÉ -->
+  <!-- ========================= -->
+
+  <footer>
+
+    <p>
+      © 2026 - Portal Física em 1 Minuto
+    </p>
+
+  </footer>
+
 </body>
+
 </html>
