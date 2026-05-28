@@ -3,74 +3,84 @@
 /* ========================= */
 
 function openPage(page){
+
   window.location.href = page;
 }
 
 function goBack(){
-  window.location.href = "index.html";
+
+  window.history.back();
 }
 
-function showPhysicsExercise(){
+/* efeito mouse */
 
-  const area = document.getElementById("physicsExercise");
+document.addEventListener("mousemove",(e)=>{
 
-  area.innerHTML = `
-    <h3>⚛ Exercício Resolvido</h3>
+  const hero = document.querySelector(".hero-box");
 
-    <p><b>Questão:</b> Um carro percorre 100 km em 2 horas. Qual sua velocidade média?</p>
+  const x = (window.innerWidth / 2 - e.pageX)/40;
 
-    <p><b>Resolução:</b></p>
+  const y = (window.innerHeight / 2 - e.pageY)/40;
 
-    <p>Vm = ΔS / ΔT</p>
-
-    <p>Vm = 100 / 2</p>
-
-    <p><b>Vm = 50 km/h</b></p>
-
-    <p style="color:#f5b041;">
-      ✔ Questão resolvida em menos de 1 minuto!
-    </p>
-  `;
-}
-
-function showMathExercise(){
-
-  const area = document.getElementById("mathExercise");
-
-  area.innerHTML = `
-    <h3>📐 Exercício Resolvido</h3>
-
-    <p><b>Questão:</b> Resolva: 2x + 4 = 10</p>
-
-    <p><b>Resolução:</b></p>
-
-    <p>2x = 10 - 4</p>
-
-    <p>2x = 6</p>
-
-    <p>x = 3</p>
-
-    <p style="color:#f5b041;">
-      ✔ Questão resolvida em menos de 1 minuto!
-    </p>
-  `;
-}
-
-/* efeito dinâmico */
-
-document.addEventListener("mousemove", (e)=>{
-
-  const cards = document.querySelectorAll(".card, .topic-card");
-
-  cards.forEach(card=>{
-
-    let x = (window.innerWidth / 2 - e.pageX)/30;
-    let y = (window.innerHeight / 2 - e.pageY)/30;
-
-    card.style.transform = `
-      rotateY(${x}deg)
-      rotateX(${y}deg)
-    `;
-  });
-
+  hero.style.transform =
+  `rotateY(${x}deg) rotateX(${y}deg)`;
 });
+
+/* partículas douradas */
+
+const bg = document.querySelector(".background-animation");
+
+for(let i=0;i<40;i++){
+
+  const particle = document.createElement("div");
+
+  particle.classList.add("particle");
+
+  particle.style.position = "absolute";
+
+  particle.style.width = "4px";
+
+  particle.style.height = "4px";
+
+  particle.style.background = "gold";
+
+  particle.style.borderRadius = "50%";
+
+  particle.style.left = Math.random()*100+"%";
+
+  particle.style.top = Math.random()*100+"%";
+
+  particle.style.opacity = Math.random();
+
+  particle.style.animation = `
+  floatParticle
+  ${5 + Math.random()*10}s
+  linear infinite`;
+
+  bg.appendChild(particle);
+}
+
+/* css dinâmica */
+
+const style = document.createElement("style");
+
+style.innerHTML = `
+@keyframes floatParticle{
+
+  0%{
+    transform:translateY(0px);
+    opacity:0;
+  }
+
+  50%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(-100px);
+    opacity:0;
+  }
+}
+`;
+
+document.head.appendChild(style);
