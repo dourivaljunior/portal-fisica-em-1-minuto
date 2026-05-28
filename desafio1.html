@@ -1,0 +1,73 @@
+<!-- ========================= -->
+<!-- desafio1.html -->
+<!-- ========================= -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background-animation"></div>
+
+<header>
+
+  <div class="hero-box">
+    <h1>🚀 Desafio 1</h1>
+  </div>
+
+</header>
+
+<section class="challenge-container">
+
+  <!-- PDF -->
+
+  <div class="content-box">
+
+    <h2>📘 Questão em PDF</h2>
+
+    <iframe
+      src="desafio1.pdf"
+      class="pdf-view">
+    </iframe>
+
+  </div>
+
+  <!-- ÁUDIO -->
+
+  <div class="content-box">
+
+    <h2>🎧 Narração da Questão</h2>
+
+    <audio controls>
+      <source src="audio1.mp3" type="audio/mpeg">
+    </audio>
+
+  </div>
+
+  <!-- VÍDEO -->
+
+  <div class="content-box">
+
+    <h2>🎥 Resolução em Vídeo</h2>
+
+    <video controls class="video-player">
+
+      <source src="video1.mp4" type="video/mp4">
+
+    </video>
+
+  </div>
+
+</section>
+
+<button class="back-btn" onclick="goBack()">
+⬅ Retornar
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
