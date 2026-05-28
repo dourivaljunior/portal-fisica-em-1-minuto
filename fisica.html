@@ -1,0 +1,59 @@
+<!-- ========================= -->
+<!-- fisica.html -->
+<!-- ========================= -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Física em 1 Minuto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>⚛ Física em 1 Minuto</h1>
+</header>
+
+<div class="menu-container">
+
+  <div class="topic-card">
+    <h1>Minhas Webpages de Física:</h2>
+    <h2>Mecânica</h2>
+    <p>Movimento, força, energia e gravitação.</p>
+    <button>Adicionar Link</button>
+  </div>
+
+  <div class="topic-card">
+    <h2>Termodinâmica</h2>
+    <p>Calor, temperatura e máquinas térmicas.</p>
+    <button>Adicionar Link</button>
+  </div>
+
+  <div class="topic-card">
+    <h2>Eletromagnetismo</h2>
+    <p>Campos elétricos, circuitos e magnetismo.</p>
+    <button>Adicionar Link</button>
+  </div>
+
+</div>
+
+<section class="enem">
+  <h2>🔥 Revisão de Questões do ENEM</h2>
+
+  <div class="exercise">
+    <h3>Exercícios Resolvidos em 1 Minuto</h3>
+
+    <button onclick="showPhysicsExercise()">
+      Mostrar Exercício
+    </button>
+
+    <div id="physicsExercise"></div>
+  </div>
+</section>
+
+<button class="back-btn" onclick="goBack()">⬅ Retornar</button>
+
+<script src="script.js"></script>
+</body>
+</html>
