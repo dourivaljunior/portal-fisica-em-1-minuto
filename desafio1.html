@@ -25,7 +25,7 @@
     </div>
   </header>
 
-  <!-- ENUNCIADO LEGÍVEL NO CELULAR -->
+  <!-- ENUNCIADO -->
   <section class="enunciado">
     <div class="enunciado-box">
       <h3>📋 O problema</h3>
@@ -33,33 +33,33 @@
         Um objeto é abandonado do repouso de uma altura de <strong>45 metros</strong>.
         Considere a aceleração da gravidade <strong>g = 10 m/s²</strong> e despreze a resistência do ar.
       </p>
-      <div class="dados-destaque">
-        <div class="dado-item">
-          <span class="dado-label">Altura</span>
-          <span class="dado-valor">45 m</span>
-        </div>
-        <div class="dado-item">
-          <span class="dado-label">Gravidade</span>
-          <span class="dado-valor">10 m/s²</span>
-        </div>
-        <div class="dado-item">
-          <span class="dado-label">Veloc. inicial</span>
-          <span class="dado-valor">0 m/s</span>
-        </div>
+      
+      <!-- FIGURA DO DESAFIO -->
+      <div class="figura-container">
+        <img src="imagens/desafio1.png" alt="Queda Livre" class="figura-desafio">
+        <p class="legenda-figura">Figura 1: Representação da queda livre</p>
       </div>
     </div>
   </section>
 
-  <!-- PERGUNTAS -->
+  <!-- PERGUNTA 1 -->
   <section class="perguntas">
     <div class="pergunta-card">
       <span class="pergunta-numero">1</span>
       <p>Quanto tempo o objeto leva para atingir o solo?</p>
+      
+      <!-- FIGURA DA PERGUNTA 1 -->
+      <div class="figura-pergunta">
+        <img src="imagens/desafio1-q1.png" alt="Gráfico tempo vs altura" class="figura-pequena">
+        <!-- SE NÃO TIVER FIGURA, COMENTE A LINHA ACIMA E DESCOMENTE A LINHA ABAIXO -->
+        <!-- <p class="sem-figura">[Figura não disponível]</p> -->
+      </div>
+      
       <div class="opcoes">
-        <button class="opcao">2,0 s</button>
-        <button class="opcao">3,0 s</button>
-        <button class="opcao">4,5 s</button>
-        <button class="opcao">5,0 s</button>
+        <button class="opcao" data-correta="false">2,0 s</button>
+        <button class="opcao" data-correta="true">3,0 s</button>
+        <button class="opcao" data-correta="false">4,5 s</button>
+        <button class="opcao" data-correta="false">5,0 s</button>
       </div>
       <button class="btn-resposta">Ver resposta</button>
       <div class="resposta-oculta">
@@ -67,14 +67,23 @@
       </div>
     </div>
 
+    <!-- PERGUNTA 2 -->
     <div class="pergunta-card">
       <span class="pergunta-numero">2</span>
       <p>Qual a velocidade ao atingir o solo?</p>
+      
+      <!-- FIGURA DA PERGUNTA 2 -->
+      <div class="figura-pergunta">
+        <img src="imagens/desafio1-q2.png" alt="Gráfico velocidade vs tempo" class="figura-pequena">
+        <!-- SE NÃO TIVER FIGURA, COMENTE A LINHA ACIMA E DESCOMENTE A LINHA ABAIXO -->
+        <!-- <p class="sem-figura">[Figura não disponível]</p> -->
+      </div>
+      
       <div class="opcoes">
-        <button class="opcao">20 m/s</button>
-        <button class="opcao">30 m/s</button>
-        <button class="opcao">45 m/s</button>
-        <button class="opcao">60 m/s</button>
+        <button class="opcao" data-correta="false">20 m/s</button>
+        <button class="opcao" data-correta="true">30 m/s</button>
+        <button class="opcao" data-correta="false">45 m/s</button>
+        <button class="opcao" data-correta="false">60 m/s</button>
       </div>
       <button class="btn-resposta">Ver resposta</button>
       <div class="resposta-oculta">
@@ -83,13 +92,18 @@
     </div>
   </section>
 
-  <!-- VÍDEO DE APOIO (dobro da altura) -->
+  <!-- VÍDEO DE APOIO COM LINK GOOGLE DRIVE -->
   <section class="video-apoio">
     <h3>🎬 Vídeo explicativo</h3>
     <div class="video-wrapper">
       <video class="video-player" controls muted playsinline>
         <source src="https://media.githubusercontent.com/media/SEU-USUARIO/SEU-REPOSITORIO/main/VideoAula.mp4" type="video/mp4">
       </video>
+    </div>
+    <div class="video-link">
+      <a href="https://drive.google.com/SEU-LINK-DESAFIO1" target="_blank" class="btn-drive">
+        📹 Assistir no Google Drive (qualidade máxima)
+      </a>
     </div>
   </section>
 
