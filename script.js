@@ -1,7 +1,6 @@
-// ===== RESPOSTAS INTERATIVAS =====
 document.addEventListener('DOMContentLoaded', () => {
   
-  // Perguntas com opções
+  // ===== PERGUNTAS COM DATA-CORRETA =====
   const opcoes = document.querySelectorAll('.opcao');
   const botoesResposta = document.querySelectorAll('.btn-resposta');
 
@@ -16,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mostrar resposta correta
-  botoesResposta.forEach((btn, index) => {
+  // Mostrar resposta correta baseada no data-correta
+  botoesResposta.forEach((btn) => {
     btn.addEventListener('click', function() {
       const card = this.closest('.pergunta-card');
       const resposta = card.querySelector('.resposta-oculta');
@@ -28,18 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
         o.classList.remove('certa', 'errada');
       });
 
-      // Define qual é a correta (hardcoded para exemplo)
-      // Perceba que a primeira opção é a correta no nosso exemplo
-      // Você pode adaptar dinamicamente
-      const correta = opcoesCard[1]; // índice 1 = "3,0 s" ou "30 m/s"
-      
-      // Marca a correta
-      correta.classList.add('certa');
-      
+      // Marca a correta baseada no atributo data-correta
+      opcoesCard.forEach(o => {
+        if (o.dataset.correta === 'true') {
+          o.classList.add('certa');
+        }
+      });
+
       // Marca a selecionada como errada se não for a correta
       const selecionada = card.querySelector('.opcao.selecionada');
-      if (selecionada && selecionada !== correta) {
+      if (selecionada && selecionada.dataset.correta !== 'true') {
         selecionada.classList.add('errada');
+      }
+
+      // Se não selecionou nenhuma, avisa
+      if (!selecionada) {
+        alert('Selecione uma opção antes de ver a resposta!');
+        return;
       }
 
       // Mostra a resposta
