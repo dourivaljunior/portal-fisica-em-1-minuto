@@ -16,30 +16,24 @@
     </div>
   </header>
 
-  <!-- VÍDEO INTRODUTÓRIO COM DOIS CAMINHOS -->
-  <section class="video-section">
-    
-    <div class="video-wrapper">
-
-      <video
-        id="videoFisica"
-        class="video-player"
-        controls
-        autoplay
-        muted
-        loop
-        playsinline>
-
-        <source
-          src="https://drive.google.com/uc?export=view&id=1i5_liEYIZGos93ODpjfbO4TvX7kpxggb"
-          type="video/mp4">
-
-        Seu navegador não suporta vídeo HTML5.
-
-      </video>
-
-    </div>
-
+ <!-- VÍDEO INTRODUTÓRIO COM YOUTUBE -->
+<section class="video-section">
+  <div class="video-wrapper">
+    <iframe 
+      class="video-player" 
+      src="https://www.youtube.com/embed/5cO_dL3K68g" 
+      title="Vídeo aula" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+  <div class="video-link">
+    <a href="https://youtu.be/5cO_dL3K68g" target="_blank" class="btn-drive">
+      📹 Assistir no YouTube (qualidade máxima)
+    </a>
+  </div>
+</section>
     <!-- Link alternativo caso o vídeo não carregue -->
     <div id="fallbackDrive" class="video-link" style="display:none;">
       <a
