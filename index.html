@@ -1,102 +1,101 @@
-<!-- ========================= -->
-<!-- index.html -->
-<!-- ========================= -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>
-    Portal Física em 1 Minuto
-  </title>
-
-  <link rel="stylesheet"
-        href="style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Física em 1 Minuto</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- FUNDO -->
-
-  <div class="background"></div>
-
-  <!-- HEADER -->
-
-  <header class="main-header">
-
-    <div class="hero-box">
-
-      <h1>
-        ⚛ Portal Física em 1 Minuto
-      </h1>
-
-      <h2>
-        Prof. Dourival Junior (Físico)
-      </h2>
-
+  <!-- HEADER COM GRADIENTE -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>⚡ Física em 1 Minuto</h1>
+      <p>Aprenda Física de forma visual, rápida e direta</p>
     </div>
-
   </header>
 
-  <!-- VIDEO -->
-
+  <!-- VÍDEO - DOBRO DA ALTURA -->
   <section class="video-section">
-
-    <h3>
-      
-    </h3>
-
-    <div class="video-container">
-
-      <iframe
-        src="https://www.youtube.com/embed/m88EpgvufBM"
-        title="Video Aula"
-        allowfullscreen
-        loading="lazy">
-
-      </iframe>
-
+    <div class="video-wrapper">
+      <video class="video-player" controls autoplay muted loop playsinline>
+        <source src="https://media.githubusercontent.com/media/SEU-USUARIO/SEU-REPOSITORIO/main/VideoAula.mp4" type="video/mp4">
+      </video>
     </div>
-
   </section>
 
-  <!-- INTRO -->
+  <!-- DESAFIOS ORGANIZADOS -->
+  <section class="desafios">
+    <h2>🚀 Desafios de Física</h2>
+    <p class="subtitulo">Escolha um tema e teste seus conhecimentos</p>
 
-  <section class="intro-section">
+    <div class="desafio-grid">
+      
+      <!-- Desafio 1 -->
+      <a href="desafio1.html" class="desafio-card">
+        <span class="badge">1</span>
+        <div class="card-content">
+          <h3>Queda Livre</h3>
+          <p>Calcule o tempo e a velocidade de um objeto em queda</p>
+          <span class="tema">Tema: Cinemática</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
 
-    <p>
-      Aprenda Física de forma rápida,
-      visual e moderna.
-    </p>
+      <!-- Desafio 2 -->
+      <a href="#" class="desafio-card">
+        <span class="badge">2</span>
+        <div class="card-content">
+          <h3>Lançamento de Projétil</h3>
+          <p>Determine o alcance máximo de um projétil</p>
+          <span class="tema">Tema: Movimento 2D</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
 
-    <button onclick="openPage('fisica.html')">
+      <!-- Desafio 3 -->
+      <a href="#" class="desafio-card">
+        <span class="badge">3</span>
+        <div class="card-content">
+          <h3>Leis de Newton</h3>
+          <p>Calcule a força resultante em um sistema</p>
+          <span class="tema">Tema: Dinâmica</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
 
-      Entrar no Portal
+      <!-- Desafio 4 -->
+      <a href="#" class="desafio-card">
+        <span class="badge">4</span>
+        <div class="card-content">
+          <h3>Energia Mecânica</h3>
+          <p>Calcule a energia cinética e potencial</p>
+          <span class="tema">Tema: Energia</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
 
-    </button>
+      <!-- Desafio 5 -->
+      <a href="#" class="desafio-card">
+        <span class="badge">5</span>
+        <div class="card-content">
+          <h3>Impulso e Momento</h3>
+          <p>Calcule a variação do momento linear</p>
+          <span class="tema">Tema: Colisões</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
 
+    </div>
   </section>
 
   <!-- FOOTER -->
-
   <footer>
-
-    <p>
-      📱 Contato: 71 98134-8237
-      Instagram: https://www.instagram.com/prof.dourival.junior
-    </p>
-
+    <p>© 2026 - Portal Física em 1 Minuto</p>
+    <p class="footer-small">Feito com ⚡ por físicos para físicos</p>
   </footer>
 
   <script src="script.js"></script>
-
 </body>
-
 </html>
