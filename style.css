@@ -1,419 +1,220 @@
 /* ========================= */
-/* style.css */
+/* style.css                 */
 /* ========================= */
 
-*{
-
-  margin:0;
-  padding:0;
-
-  box-sizing:border-box;
-
-  font-family:
-  Arial,
-  Helvetica,
-  sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-
-  background:#07111f;
-
-  color:white;
-
-  min-height:100vh;
-
-  overflow-x:hidden;
-
-  position:relative;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0b0f1a;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-/* FUNDO */
-
-.background{
-
-  position:fixed;
-
-  width:100%;
-  height:100%;
-
-  top:0;
-  left:0;
-
-  z-index:-1;
-
+/* Fundo com efeito de engrenagens e expansão cósmica */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background:
-  radial-gradient(
-    circle at top,
-    rgba(0,120,255,0.15),
-    transparent 70%
-  );
+    radial-gradient(ellipse at 20% 50%, rgba(30, 60, 120, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(120, 30, 60, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(200, 100, 50, 0.1) 0%, transparent 50%),
+    #0b0f1a;
+  z-index: 0;
 }
 
-/* HEADER */
-
-.main-header{
-
-  width:100%;
-
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-  padding:50px 20px 30px 20px;
+/* Header com efeito de grade mecânica */
+.main-header {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
 }
 
-/* HERO */
-
-.hero-box{
-
-  width:90%;
-
-  max-width:900px;
-
-  padding:35px 25px;
-
-  border-radius:28px;
-
-  text-align:center;
-
-  background:
-  linear-gradient(
-    135deg,
-    rgba(30,60,114,0.85),
-    rgba(42,82,152,0.85)
-  );
-
-  border:
-  1px solid rgba(255,255,255,0.1);
-
-  box-shadow:
-  0 0 25px rgba(0,140,255,0.15);
-
-  backdrop-filter:blur(8px);
+.hero-box {
+  background: linear-gradient(145deg, rgba(20, 30, 50, 0.85), rgba(10, 15, 30, 0.95));
+  border: 1px solid rgba(255, 180, 71, 0.25);
+  border-radius: 24px;
+  padding: 40px 30px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.1s ease;
+  perspective: 800px;
 }
 
-/* TITULOS */
-
-.hero-box h1{
-
-  font-size:3rem;
-
-  line-height:1.2;
-
-  margin-bottom:15px;
-
-  color:white;
-
-  text-align:center;
+.hero-box h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffd966, #ffb347);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  text-shadow: 0 0 30px rgba(255, 180, 71, 0.2);
 }
 
-.hero-box h2{
-
-  font-size:1.2rem;
-
-  font-weight:300;
-
-  color:#d9e6ff;
-
-  text-align:center;
+/* Container principal */
+.challenge-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-/* VIDEO */
-
-.video-section{
-
-  width:100%;
-
-  padding:20px;
-
-  text-align:center;
+/* Cada bloco de conteúdo */
+.content-box {
+  background: rgba(18, 25, 45, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
 }
 
-.video-section h3{
-
-  margin-bottom:20px;
-
-  font-size:1.4rem;
-
-  color:#9cc7ff;
-
-  text-align:center;
+.content-box:hover {
+  transform: translateY(-2px);
 }
 
-.video-container{
-
-  width:90%;
-
-  max-width:950px;
-
-  margin:auto;
-
-  border-radius:22px;
-
-  overflow:hidden;
-
-  box-shadow:
-  0 0 30px rgba(0,120,255,0.2);
+.content-box h2,
+.content-box h3 {
+  color: #ffcc77;
+  margin-bottom: 16px;
+  font-weight: 600;
 }
 
-.video-container iframe{
-
-  width:100%;
-
-  height:520px;
-
-  border:none;
+.content-box h3 {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  font-weight: 400;
 }
 
-/* INTRO */
-
-.intro-section{
-
-  width:100%;
-
-  padding:50px 20px;
-
-  text-align:center;
-
-  display:flex;
-
-  flex-direction:column;
-
-  align-items:center;
-
-  justify-content:center;
+/* Imagem da questão */
+.question-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto 20px auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.intro-section p{
-
-  font-size:1.3rem;
-
-  line-height:1.6;
-
-  margin-bottom:35px;
-
-  color:#d9e6ff;
-
-  max-width:700px;
-
-  text-align:center;
+/* Player de áudio */
+.audio-player {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px;
 }
 
-/* BOTÕES */
+/* ========================================== */
+/* VÍDEO – CORREÇÃO DO TAMANHO E CORTE       */
+/* ========================================== */
 
-button{
-
-  padding:16px 34px;
-
-  border:none;
-
-  border-radius:16px;
-
-  background:
-  linear-gradient(
-    135deg,
-    #2b7cff,
-    #56a3ff
-  );
-
-  color:white;
-
-  font-size:1rem;
-
-  font-weight:bold;
-
-  cursor:pointer;
-
-  transition:0.3s;
+/* Wrapper para manter proporção 16:9 e responsivo */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;  /* ← Aumentado de 800px para 1000px */
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  background: #000;
+  aspect-ratio: 16 / 9;  /* ← Mantém a proporção correta */
 }
 
-button:hover{
-
-  transform:translateY(-3px);
-
-  box-shadow:
-  0 0 20px rgba(0,120,255,0.45);
+/* Iframe do Google Drive ocupando todo o wrapper */
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
-/* DESAFIOS */
-
-.challenge-section{
-
-  width:100%;
-
-  padding:30px 20px;
-
-  text-align:center;
+/* Fallback para navegadores antigos (sem aspect-ratio) */
+@supports not (aspect-ratio: 16 / 9) {
+  .video-wrapper {
+    padding-bottom: 56.25%; /* 9 / 16 = 0.5625 */
+    height: 0;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.challenge-section h2{
+/* ========================================== */
 
-  margin-bottom:35px;
-
-  font-size:2rem;
-
-  color:#9cc7ff;
+/* Botão voltar */
+.back-btn {
+  position: relative;
+  z-index: 2;
+  margin-top: 30px;
+  padding: 14px 32px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  backdrop-filter: blur(8px);
 }
 
-.challenge-card{
-
-  width:90%;
-
-  max-width:600px;
-
-  margin:auto;
-
-  padding:35px;
-
-  border-radius:24px;
-
-  background:
-  rgba(255,255,255,0.04);
-
-  border:
-  1px solid rgba(255,255,255,0.08);
-
-  text-align:center;
+.back-btn:hover {
+  background: rgba(255, 180, 71, 0.2);
+  border-color: #ffb347;
+  transform: translateX(-4px);
 }
 
-.challenge-card h3{
-
-  margin-bottom:25px;
-
-  color:white;
-}
-
-/* DESAFIO */
-
-.challenge-container{
-
-  width:92%;
-
-  max-width:1000px;
-
-  margin:auto;
-
-  padding-bottom:60px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:30px;
-}
-
-/* BOX */
-
-.content-box{
-
-  width:100%;
-
-  padding:25px;
-
-  border-radius:24px;
-
-  background:
-  rgba(255,255,255,0.04);
-
-  border:
-  1px solid rgba(255,255,255,0.08);
-
-  text-align:center;
-}
-
-.content-box h2{
-
-  margin-bottom:20px;
-
-  color:#9cc7ff;
-}
-
-/* IMAGEM QUESTÃO */
-
-.question-image{
-
-  width:100%;
-
-  border-radius:18px;
-
-  box-shadow:
-  0 0 20px rgba(0,120,255,0.15);
-}
-
-/* AUDIO */
-
-.audio-player{
-
-  width:100%;
-}
-
-/* VIDEO */
-
-.video-player{
-
-  width:100%;
-
-  border-radius:18px;
-}
-
-/* BOTÃO VOLTAR */
-
-.back-btn{
-
-  display:block;
-
-  margin:40px auto;
-}
-
-/* FOOTER */
-
-footer{
-
-  width:100%;
-
-  padding:30px;
-
-  text-align:center;
-
-  color:#d9e6ff;
-}
-
-/* RESPONSIVO */
-
-@media(max-width:768px){
-
-  .hero-box{
-
-    width:95%;
-
-    padding:28px 18px;
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-box h1 {
+    font-size: 2rem;
   }
 
-  .hero-box h1{
-
-    font-size:2rem;
+  .content-box {
+    padding: 20px;
   }
 
-  .hero-box h2{
-
-    font-size:1rem;
+  .video-wrapper {
+    max-width: 100%;
+    border-radius: 12px;
   }
 
-  .video-container iframe{
-
-    height:240px;
+  .question-image {
+    max-width: 100%;
   }
 
-  .intro-section p{
-
-    font-size:1.1rem;
-  }
-
-  .challenge-section h2{
-
-    font-size:1.6rem;
+  .audio-player {
+    max-width: 100%;
   }
 }
