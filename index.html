@@ -16,36 +16,32 @@
     </div>
   </header>
 
- <!-- VÍDEO INTRODUTÓRIO COM YOUTUBE -->
-<section class="video-section">
-  <div class="video-wrapper">
-    <iframe 
-      class="video-player" 
-      src="https://www.youtube.com/embed/5cO_dL3K68g" 
-      title="Vídeo aula" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-  <div class="video-link">
-    <a href="https://youtu.be/5cO_dL3K68g" target="_blank" class="btn-drive">
-      📹 Assistir no YouTube (qualidade máxima)
-    </a>
-  </div>
-</section>
-    <!-- Link alternativo caso o vídeo não carregue -->
-    <div id="fallbackDrive" class="video-link" style="display:none;">
-      <a
-        href="https://drive.google.com/file/d/1i5_liEYIZGos93ODpjfbO4TvX7kpxggb/view?usp=sharing"
-        target="_blank"
-        class="btn-drive">
-
-        📹 Assistir no Google Drive (qualidade máxima)
-
+  <!-- VÍDEO INTRODUTÓRIO COM YOUTUBE -->
+  <section class="video-section">
+    <div class="video-wrapper">
+      <iframe 
+        id="videoFisica"
+        class="video-player" 
+        src="https://www.youtube.com/embed/5cO_dL3K68g" 
+        title="Vídeo aula" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    
+    <div class="video-link" id="linkYouTube">
+      <a href="https://youtu.be/5cO_dL3K68g" target="_blank" class="btn-drive">
+        📹 Assistir no YouTube (qualidade máxima)
       </a>
     </div>
 
+    <!-- Fallback caso o YouTube não carregue -->
+    <div id="fallbackDrive" class="video-link" style="display:none;">
+      <a href="https://drive.google.com/file/d/1i5_liEYIZGos93ODpjfbO4TvX7kpxggb/view?usp=sharing" target="_blank" class="btn-drive">
+        📹 Assistir no Google Drive (qualidade máxima)
+      </a>
+    </div>
   </section>
 
   <!-- DESAFIOS ORGANIZADOS -->
@@ -120,15 +116,18 @@
   </footer>
 
   <script>
-
+    // Script para fallback - AGORA CORRETO
     const video = document.getElementById("videoFisica");
     const fallback = document.getElementById("fallbackDrive");
+    const linkYouTube = document.getElementById("linkYouTube");
 
-    video.addEventListener("error", function () {
-      fallback.style.display = "block";
-      video.style.display = "none";
-    });
-
+    if (video) {
+      video.addEventListener("error", function () {
+        fallback.style.display = "block";
+        linkYouTube.style.display = "none";
+        video.style.display = "none";
+      });
+    }
   </script>
 
   <script src="script.js"></script>
