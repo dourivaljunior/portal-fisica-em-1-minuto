@@ -1,102 +1,98 @@
-<!-- ========================= -->
-<!-- desafio1.html             -->
-<!-- ========================= -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>
-    Desafio 1
-  </title>
-
-  <link rel="stylesheet"
-        href="style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Desafio 1 - Queda Livre</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="background"></div>
-
-<header class="main-header">
-
-  <div class="hero-box">
-
-    <h1>
-      Desafio 1
-    </h1>
-
+  <!-- BOTÃO VOLTAR -->
+  <div class="back-button">
+    <a href="index.html" class="btn-back">← Voltar</a>
   </div>
 
-</header>
+  <!-- HEADER DO DESAFIO -->
+  <header class="desafio-header">
+    <div class="tema-box">
+      <span class="tema-label">Tema</span>
+      <h2>Cinemática</h2>
+    </div>
+    <div class="desafio-titulo">
+      <span class="badge-grande">Desafio 1</span>
+      <h1>Queda Livre</h1>
+    </div>
+  </header>
 
-<section class="challenge-container">
+  <!-- ENUNCIADO LEGÍVEL NO CELULAR -->
+  <section class="enunciado">
+    <div class="enunciado-box">
+      <h3>📋 O problema</h3>
+      <p>
+        Um objeto é abandonado do repouso de uma altura de <strong>45 metros</strong>.
+        Considere a aceleração da gravidade <strong>g = 10 m/s²</strong> e despreze a resistência do ar.
+      </p>
+      <div class="dados-destaque">
+        <div class="dado-item">
+          <span class="dado-label">Altura</span>
+          <span class="dado-valor">45 m</span>
+        </div>
+        <div class="dado-item">
+          <span class="dado-label">Gravidade</span>
+          <span class="dado-valor">10 m/s²</span>
+        </div>
+        <div class="dado-item">
+          <span class="dado-label">Veloc. inicial</span>
+          <span class="dado-valor">0 m/s</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- QUESTÃO -->
-
-  <div class="content-box">
-
-    <h3>
-      📘 Questão envolvendo o conceito de força (peso, normal e de atrito) e a aplicação da 2a lei de Newton.
-    </h3>
-
-    <img
-      src="desafio1.jpg"
-      class="question-image"
-      alt="Questão do desafio">
-
-    <!-- AUDIO -->
-    <audio
-      controls
-      class="audio-player">
-
-      <source
-        src="desafio1.mp3"
-        type="audio/mpeg">
-
-    </audio>
-
-  </div>
-
-  <!-- VÍDEO – Google Drive embed com tamanho ajustado -->
-  <div class="content-box">
-
-    <h2>
-      🎥 Resolução
-    </h2>
-
-    <!-- Wrapper para manter proporção e tamanho correto -->
-    <div class="video-wrapper">
-
-      <iframe
-        src="https://drive.google.com/file/d/1qpgwAtJZ-xnKtA5ZDx6Kfqt92hnJtMi6/preview"
-        class="video-player"
-        allowfullscreen
-        allow="autoplay">
-      </iframe>
-
+  <!-- PERGUNTAS -->
+  <section class="perguntas">
+    <div class="pergunta-card">
+      <span class="pergunta-numero">1</span>
+      <p>Quanto tempo o objeto leva para atingir o solo?</p>
+      <div class="opcoes">
+        <button class="opcao">2,0 s</button>
+        <button class="opcao">3,0 s</button>
+        <button class="opcao">4,5 s</button>
+        <button class="opcao">5,0 s</button>
+      </div>
+      <button class="btn-resposta">Ver resposta</button>
+      <div class="resposta-oculta">
+        <p>✅ <strong>3,0 s</strong> (usando t = √(2h/g))</p>
+      </div>
     </div>
 
-  </div>
+    <div class="pergunta-card">
+      <span class="pergunta-numero">2</span>
+      <p>Qual a velocidade ao atingir o solo?</p>
+      <div class="opcoes">
+        <button class="opcao">20 m/s</button>
+        <button class="opcao">30 m/s</button>
+        <button class="opcao">45 m/s</button>
+        <button class="opcao">60 m/s</button>
+      </div>
+      <button class="btn-resposta">Ver resposta</button>
+      <div class="resposta-oculta">
+        <p>✅ <strong>30 m/s</strong> (usando v = g·t)</p>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- VÍDEO DE APOIO (dobro da altura) -->
+  <section class="video-apoio">
+    <h3>🎬 Vídeo explicativo</h3>
+    <div class="video-wrapper">
+      <video class="video-player" controls muted playsinline>
+        <source src="https://media.githubusercontent.com/media/SEU-USUARIO/SEU-REPOSITORIO/main/VideoAula.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
 
-<button
-class="back-btn"
-onclick="goBack()">
-
-⬅ Retornar
-
-</button>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
