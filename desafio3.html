@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Desafio 3 - Leis de Newton</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="back-button">
+    <a href="index.html" class="btn-back">← Voltar</a>
+  </div>
+
+  <header class="desafio-header">
+    <div class="tema-box">
+      <span class="tema-label">Tema</span>
+      <h2>Dinâmica</h2>
+    </div>
+    <div class="desafio-titulo">
+      <span class="badge-grande">Desafio 3</span>
+      <h1>Leis de Newton</h1>
+    </div>
+  </header>
+
+  <section class="enunciado">
+    <div class="enunciado-box">
+      <h3>📋 O problema</h3>
+      <p>
+        Um bloco de <strong>5 kg</strong> é puxado por uma força horizontal de <strong>20 N</strong>
+        sobre uma superfície com atrito desprezível.
+      </p>
+      
+      <div class="figura-container">
+        <img src="imagens/desafio3.png" alt="Bloco sendo puxado" class="figura-desafio">
+        <p class="legenda-figura">Figura 1: Diagrama do bloco</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="perguntas">
+    <div class="pergunta-card">
+      <span class="pergunta-numero">1</span>
+      <p>Qual a aceleração do bloco?</p>
+      
+      <div class="figura-pergunta">
+        <img src="imagens/desafio3-q1.png" alt="Forças atuantes" class="figura-pequena">
+        <!-- <p class="sem-figura">[Figura não disponível]</p> -->
+      </div>
+      
+      <div class="opcoes">
+        <button class="opcao" data-correta="false">2 m/s²</button>
+        <button class="opcao" data-correta="true">4 m/s²</button>
+        <button class="opcao" data-correta="false">5 m/s²</button>
+        <button class="opcao" data-correta="false">10 m/s²</button>
+      </div>
+      <button class="btn-resposta">Ver resposta</button>
+      <div class="resposta-oculta">
+        <p>✅ <strong>4 m/s²</strong> (usando a = F/m)</p>
+      </div>
+    </div>
+
+    <div class="pergunta-card">
+      <span class="pergunta-numero">2</span>
+      <p>Qual a distância percorrida em 3 segundos?</p>
+      
+      <div class="figura-pergunta">
+        <img src="imagens/desafio3-q2.png" alt="Movimento retilíneo" class="figura-pequena">
+        <!-- <p class="sem-figura">[Figura não disponível]</p> -->
+      </div>
+      
+      <div class="opcoes">
+        <button class="opcao" data-correta="false">9 m</button>
+        <button class="opcao" data-correta="false">12 m</button>
+        <button class="opcao" data-correta="true">18 m</button>
+        <button class="opcao" data-correta="false">36 m</button>
+      </div>
+      <button class="btn-resposta">Ver resposta</button>
+      <div class="resposta-oculta">
+        <p>✅ <strong>18 m</strong> (usando S = at²/2)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-apoio">
+    <h3>🎬 Vídeo explicativo</h3>
+    <div class="video-wrapper">
+      <video class="video-player" controls muted playsinline>
+        <source src="https://media.githubusercontent.com/media/SEU-USUARIO/SEU-REPOSITORIO/main/VideoAula.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-link">
+      <a href="https://drive.google.com/SEU-LINK-DESAFIO3" target="_blank" class="btn-drive">
+        📹 Assistir no Google Drive (qualidade máxima)
+      </a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
