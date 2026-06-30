@@ -1,358 +1,40 @@
 /* ========================= */
-/* style.css                 */
+/* script.js */
 /* ========================= */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ABRIR PÁGINAS */
+
+function openPage(page){
+
+  window.location.href = page;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #0b0f1a;
-  color: #f0f0f0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+/* VOLTAR */
+
+function goBack(){
+
+  window.history.back();
 }
 
-/* Fundo com efeito de engrenagens e expansão cósmica */
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(30, 60, 120, 0.3) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 50%, rgba(120, 30, 60, 0.2) 0%, transparent 60%),
-    radial-gradient(ellipse at 50% 100%, rgba(200, 100, 50, 0.1) 0%, transparent 50%),
-    #0b0f1a;
-  z-index: 0;
-}
+/* EFEITO LEVE NO HERO */
 
-/* ========================= */
-/* HEADER e HERO             */
-/* ========================= */
+document.addEventListener("mousemove",(e)=>{
 
-.main-header {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 30px;
-}
+  const hero =
+  document.querySelector(".hero-box");
 
-.hero-box {
-  background: linear-gradient(145deg, rgba(20, 30, 50, 0.85), rgba(10, 15, 30, 0.95));
-  border: 1px solid rgba(255, 180, 71, 0.25);
-  border-radius: 24px;
-  padding: 40px 30px;
-  text-align: center;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
-  transition: transform 0.1s ease;
-  perspective: 800px;
-}
+  if(hero){
 
-.hero-box h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, #ffd966, #ffb347);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: 2px;
-  text-shadow: 0 0 30px rgba(255, 180, 71, 0.2);
-}
+    const x =
+    (window.innerWidth / 2 - e.pageX) / 60;
 
-.hero-box h2 {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
-  margin-top: 8px;
-  letter-spacing: 1px;
-}
+    const y =
+    (window.innerHeight / 2 - e.pageY) / 60;
 
-/* ========================= */
-/* INDEX - PÁGINA INICIAL    */
-/* ========================= */
-
-.video-section {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 900px;
-  margin-bottom: 30px;
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  background: #000;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.intro-section {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-.intro-section p {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
-}
-
-.intro-section button {
-  padding: 14px 40px;
-  background: linear-gradient(135deg, #ffd966, #ffb347);
-  border: none;
-  border-radius: 40px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #1a1a2e;
-  cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 4px 20px rgba(255, 180, 71, 0.3);
-}
-
-.intro-section button:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 30px rgba(255, 180, 71, 0.5);
-}
-
-footer {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-footer p {
-  line-height: 1.6;
-}
-
-/* ========================= */
-/* DESAFIO - PÁGINA INTERNA  */
-/* ========================= */
-
-.challenge-container {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.content-box {
-  background: rgba(18, 25, 45, 0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  padding: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s;
-}
-
-.content-box:hover {
-  transform: translateY(-2px);
-}
-
-.content-box h2,
-.content-box h3 {
-  color: #ffcc77;
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-
-.content-box h3 {
-  font-size: 1.1rem;
-  color: #e0e0e0;
-  font-weight: 400;
-}
-
-/* Imagem da questão */
-.question-image {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 16px;
-  display: block;
-  margin: 0 auto 20px auto;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Player de áudio */
-.audio-player {
-  width: 100%;
-  max-width: 600px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 40px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 8px;
-}
-
-/* ========================================== */
-/* VÍDEO – CORREÇÃO DO TAMANHO E CORTE       */
-/* ========================================== */
-
-/* Wrapper para manter proporção 16:9 e responsivo */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;  /* Aumentado para ocupar mais espaço */
-  margin: 0 auto;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  background: #000;
-  aspect-ratio: 16 / 9;
-}
-
-/* Iframe do Google Drive ocupando todo o wrapper */
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
-/* Fallback para navegadores antigos */
-@supports not (aspect-ratio: 16 / 9) {
-  .video-wrapper {
-    padding-bottom: 56.25%;
-    height: 0;
+    hero.style.transform =
+    `
+    rotateY(${x}deg)
+    rotateX(${y}deg)
+    `;
   }
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/* ========================================== */
-
-/* Botão voltar */
-.back-btn {
-  position: relative;
-  z-index: 2;
-  margin-top: 30px;
-  padding: 14px 32px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 40px;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s;
-  backdrop-filter: blur(8px);
-}
-
-.back-btn:hover {
-  background: rgba(255, 180, 71, 0.2);
-  border-color: #ffb347;
-  transform: translateX(-4px);
-}
-
-/* ========================= */
-/* RESPONSIVO                */
-/* ========================= */
-
-@media (max-width: 768px) {
-  .hero-box h1 {
-    font-size: 2rem;
-  }
-
-  .hero-box h2 {
-    font-size: 1rem;
-  }
-
-  .content-box {
-    padding: 20px;
-  }
-
-  .video-wrapper {
-    max-width: 100%;
-    border-radius: 12px;
-  }
-
-  .video-container {
-    border-radius: 12px;
-  }
-
-  .question-image {
-    max-width: 100%;
-  }
-
-  .audio-player {
-    max-width: 100%;
-  }
-
-  .intro-section p {
-    font-size: 1rem;
-  }
-
-  .intro-section button {
-    padding: 12px 30px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 12px;
-  }
-
-  .hero-box {
-    padding: 25px 15px;
-  }
-
-  .hero-box h1 {
-    font-size: 1.5rem;
-  }
-
-  .content-box {
-    padding: 16px;
-  }
-
-  .back-btn {
-    padding: 10px 20px;
-    font-size: 0.85rem;
-  }
-
-  footer {
-    font-size: 0.7rem;
-  }
-}
+})
