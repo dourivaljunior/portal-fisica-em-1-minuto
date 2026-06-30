@@ -1,4 +1,3 @@
-/* ========================= */
 /* script.js */
 /* ========================= */
 
@@ -37,4 +36,4 @@ document.addEventListener("mousemove",(e)=>{
     rotateX(${y}deg)
     `;
   }
-});
+})
