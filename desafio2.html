@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Desafio 2 - Lançamento de Projétil</title>
+  <title>Desafio 2 - Eletricidade</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +15,11 @@
   <header class="desafio-header">
     <div class="tema-box">
       <span class="tema-label">Tema</span>
-      <h2>Movimento 2D</h2>
+      <h2>Chuveiro elétrico</h2>
     </div>
     <div class="desafio-titulo">
       <span class="badge-grande">Desafio 2</span>
-      <h1>Lançamento de Projétil</h1>
+      <h1>Potência elétrica</h1>
     </div>
   </header>
 
@@ -27,13 +27,19 @@
     <div class="enunciado-box">
       <h3>📋 O problema</h3>
       <p>
-        Um projétil é lançado com velocidade de <strong>50 m/s</strong> formando um ângulo de <strong>30°</strong> com a horizontal.
-        Considere <strong>g = 10 m/s²</strong>.
+        Um chuveiro elétrico na posição A dissipa uma potência elétrica de 5kW e na posição B dissipa 4kW. 
+        Qual a alternativa correta:
+a)	A resistência em B tem o valor de 10Ω.
+b)	O disjuntor indicado para esse chuveiro é um de 20A.
+c)	A corrente elétrica quando o chuveiro está na posição B é de 25A.
+d)	A corrente elétrica quando o chuveiro está na posição A é de 20A.
+e)	A resistência elétrica total do resistor é de 10Ω.
+
       </p>
       
       <div class="figura-container">
-        <img src="imagens/desafio2.png" alt="Lançamento de Projétil" class="figura-desafio">
-        <p class="legenda-figura">Figura 1: Trajetória do projétil</p>
+        <img src="imagens/desafio2.png" alt="Circuito elétrico" class="figura-desafio">
+        <p class="legenda-figura">Figura 1: Imagem do chuveiro.</p>
       </div>
     </div>
   </section>
@@ -41,7 +47,7 @@
   <section class="perguntas">
     <div class="pergunta-card">
       <span class="pergunta-numero">1</span>
-      <p>Qual o tempo total de voo?</p>
+      <p>Se um fluxo de água de 100 ml por segundo a 20,5 graus celsius entrar no chuveiro, com que temperatura ela sairá se o chuveiro estiver na posição A? COnsidere 1cal=4J. .</p>
       
       <div class="figura-pergunta">
         <img src="imagens/desafio2-q1.png" alt="Tempo de voo" class="figura-pequena">
@@ -49,20 +55,20 @@
       </div>
       
       <div class="opcoes">
-        <button class="opcao" data-correta="false">2,5 s</button>
-        <button class="opcao" data-correta="false">4,0 s</button>
-        <button class="opcao" data-correta="true">5,0 s</button>
-        <button class="opcao" data-correta="false">7,5 s</button>
+        <button class="opcao" data-correta="false">25</button>
+        <button class="opcao" data-correta="false">40</button>
+        <button class="opcao" data-correta="true">33</button>
+        <button class="opcao" data-correta="false">75</button>
       </div>
       <button class="btn-resposta">Ver resposta</button>
       <div class="resposta-oculta">
-        <p>✅ <strong>5,0 s</strong> (usando T = 2·v₀·senθ/g)</p>
+        <p>✅ <strong>5,0 s</strong> (usando P = Q.4/t)</p>
       </div>
     </div>
 
     <div class="pergunta-card">
       <span class="pergunta-numero">2</span>
-      <p>Qual o alcance máximo?</p>
+      <p>O cuveiro é usado por 30min por dia na posição B. Qual o consumo em Kw.h do chuveiro na posição B?</p>
       
       <div class="figura-pergunta">
         <img src="imagens/desafio2-q2.png" alt="Alcance máximo" class="figura-pequena">
@@ -70,14 +76,14 @@
       </div>
       
       <div class="opcoes">
-        <button class="opcao" data-correta="false">125 m</button>
-        <button class="opcao" data-correta="false">200 m</button>
-        <button class="opcao" data-correta="true">216,5 m</button>
-        <button class="opcao" data-correta="false">250 m</button>
+        <button class="opcao" data-correta="false">0,25kWh</button>
+        <button class="opcao" data-correta="false">20kWh</button>
+        <button class="opcao" data-correta="true">2kWh</button>
+        <button class="opcao" data-correta="false">4kWh</button>
       </div>
       <button class="btn-resposta">Ver resposta</button>
       <div class="resposta-oculta">
-        <p>✅ <strong>216,5 m</strong> (usando A = v₀²·sen2θ/g)</p>
+        <p>✅ <strong>216,5 m</strong> (usando E = P. t sendo t=0,5h)</p>
       </div>
     </div>
   </section>
