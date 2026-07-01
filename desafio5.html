@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Desafio 5 - Impulso e Momento</title>
+  <title>Desafio 5 - Corpos e Polia</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +15,11 @@
   <header class="desafio-header">
     <div class="tema-box">
       <span class="tema-label">Tema</span>
-      <h2>Colisões</h2>
+      <h2>Leis de Newton</h2>
     </div>
     <div class="desafio-titulo">
       <span class="badge-grande">Desafio 5</span>
-      <h1>Impulso e Momento</h1>
+      <h1>Forças</h1>
     </div>
   </header>
 
@@ -27,13 +27,25 @@
     <div class="enunciado-box">
       <h3>📋 O problema</h3>
       <p>
-        Um corpo de <strong>3 kg</strong> se move a <strong>8 m/s</strong> e colide elasticamente
-        com outro corpo de <strong>2 kg</strong> inicialmente em repouso.
+        Um sistema é constituído por uma polia ideal e dois corpos m1=10kg e m2=5kg. Uma força Vertical F=200N é aplicada ao sistema como indicado na figura.
+
+Analise as afirmações a seguir.
+i) A aceleração de m1 é 10 m/s2.
+ii) A força normal que a superfície exerce em m1 vale zero.
+iii) A aceleração de m2 é 10m/s2.
+
+a) Somente i e ii estão corretas.
+b) Somente i e iii estão corretas.
+c) Somente ii e iii estão corretas.
+d) Todas estão corretas.
+e) Nenhuma afirmativa está correta.
+
+.
       </p>
       
       <div class="figura-container">
-        <img src="imagens/desafio5.png" alt="Colisão elástica" class="figura-desafio">
-        <p class="legenda-figura">Figura 1: Colisão entre dois corpos</p>
+        <img src="imagens/desafio5.jpg" alt="Colisão elástica" class="figura-desafio">
+        <p class="legenda-figura">Figura 1: Sistema com dois corpos e uma polia.</p>
       </div>
     </div>
   </section>
@@ -41,7 +53,7 @@
   <section class="perguntas">
     <div class="pergunta-card">
       <span class="pergunta-numero">1</span>
-      <p>Qual o momento linear inicial do sistema?</p>
+      <p>Se a força aplicada for de 50N, qual o valor da força normal em m2?</p>
       
       <div class="figura-pergunta">
         <img src="imagens/desafio5-q1.png" alt="Momento linear" class="figura-pequena">
@@ -49,20 +61,20 @@
       </div>
       
       <div class="opcoes">
-        <button class="opcao" data-correta="false">16 kg·m/s</button>
-        <button class="opcao" data-correta="false">20 kg·m/s</button>
-        <button class="opcao" data-correta="true">24 kg·m/s</button>
-        <button class="opcao" data-correta="false">30 kg·m/s</button>
+        <button class="opcao" data-correta="false">10</button>
+        <button class="opcao" data-correta="false">50</button>
+        <button class="opcao" data-correta="true">25</button>
+        <button class="opcao" data-correta="false">10</button>
       </div>
       <button class="btn-resposta">Ver resposta</button>
       <div class="resposta-oculta">
-        <p>✅ <strong>24 kg·m/s</strong> (usando Q = m·v)</p>
+        <p>✅ <strong>25</strong> (pois N+T=P)</p>
       </div>
     </div>
 
     <div class="pergunta-card">
       <span class="pergunta-numero">2</span>
-      <p>Qual a velocidade do corpo de 3 kg após a colisão?</p>
+      <p>Se a força aplicada for de 50N, qual o valor da força normal em m1?</p>
       
       <div class="figura-pergunta">
         <img src="imagens/desafio5-q2.png" alt="Velocidade após colisão" class="figura-pequena">
@@ -70,14 +82,14 @@
       </div>
       
       <div class="opcoes">
-        <button class="opcao" data-correta="false">1,6 m/s</button>
-        <button class="opcao" data-correta="true">3,2 m/s</button>
-        <button class="opcao" data-correta="false">4,8 m/s</button>
-        <button class="opcao" data-correta="false">6,4 m/s</button>
+        <button class="opcao" data-correta="false">50</button>
+        <button class="opcao" data-correta="true">150</button>
+        <button class="opcao" data-correta="false">25</button>
+        <button class="opcao" data-correta="false">125</button>
       </div>
       <button class="btn-resposta">Ver resposta</button>
       <div class="resposta-oculta">
-        <p>✅ <strong>3,2 m/s</strong> (usando conservação do momento)</p>
+        <p>✅ <strong>75</strong> (N+T=P)</p>
       </div>
     </div>
   </section>
@@ -86,7 +98,7 @@
     <h3>🎬 Vídeo explicativo</h3>
     <div class="video-wrapper">
       <video class="video-player" controls muted playsinline>
-        <source src="https://media.githubusercontent.com/media/SEU-USUARIO/SEU-REPOSITORIO/main/VideoAula.mp4" type="video/mp4">
+        <source src="https://youtu.be/6dCZh3fOYjI" type="video/mp4">
       </video>
     </div>
     <div class="video-link">
