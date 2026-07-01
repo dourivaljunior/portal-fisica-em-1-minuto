@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Desafio 1 - Queda Livre</title>
+  <title>Desafio 1 - Dinâmica - Leis de Newton</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,11 +17,11 @@
   <header class="desafio-header">
     <div class="tema-box">
       <span class="tema-label">Tema</span>
-      <h2>Cinemática</h2>
+      <h2>Dinâmica</h2>
     </div>
     <div class="desafio-titulo">
       <span class="badge-grande">Desafio 1</span>
-      <h1>Queda Livre</h1>
+      <h1>Dinâmica</h1>
     </div>
   </header>
 
@@ -30,14 +30,16 @@
     <div class="enunciado-box">
       <h3>📋 O problema</h3>
       <p>
-        Um objeto é abandonado do repouso de uma altura de <strong>45 metros</strong>.
-        Considere a aceleração da gravidade <strong>g = 10 m/s²</strong> e despreze a resistência do ar.
+        Uma caixa com 120kg está sobre um piso horizontal plano e áspero. 
+Calcule o valor da força para que a caixa com massa de 120kg acelere a 0,5 m/s<sup>2</sup>.
+Dados: Valores dos coeficientes de atrito cinético (μc=0,2) e estático (μc=0,3) e considere também senθ=0,60 e cos θ=0,80.
+Considere a aceleração da gravidade <strong>g = 10 m/s<sup>2</sup></strong> e despreze a resistência do ar.
       </p>
       
       <!-- FIGURA DO DESAFIO -->
       <div class="figura-container">
-        <img src="imagens/desafio1.png" alt="Queda Livre" class="figura-desafio">
-        <p class="legenda-figura">Figura 1: Representação da queda livre</p>
+        <img src="imagens/desafio1.jpg" alt="Queda Livre" class="figura-desafio">
+        <p class="legenda-figura">Figura 1: Força Aplicada na caixa.</p>
       </div>
     </div>
   </section>
@@ -46,44 +48,60 @@
   <section class="perguntas">
     <div class="pergunta-card">
       <span class="pergunta-numero">1</span>
-      <p>Quanto tempo o objeto leva para atingir o solo?</p>
+      <p>Se F=300N, o que teremos de movimento para a caixa?</p>
       
       <!-- FIGURA DA PERGUNTA 1 -->
-      <div class="figura-pergunta">
-        <img src="imagens/desafio1-q1.png" alt="Gráfico tempo vs altura" class="figura-pequena">
-        <!-- SE NÃO TIVER FIGURA, COMENTE A LINHA ACIMA E DESCOMENTE A LINHA ABAIXO -->
-        <!-- <p class="sem-figura">[Figura não disponível]</p> -->
-      </div>
+     <div class="figura-pergunta">
+
+    <!-- SE HOUVER FIGURA, DESCOMENTE A LINHA ABAIXO -->
+    <!--
+    <img src="imagens/desafio1-q1.png"
+         alt="Figura da questão"
+         class="figura-pequena">
+    -->
+
+    <!-- SE NÃO HOUVER FIGURA, UTILIZE A MENSAGEM ABAIXO -->
+    <p class="sem-figura">[Esta questão não possui figura]</p>
+
+</div>
       
       <div class="opcoes">
-        <button class="opcao" data-correta="false">2,0 s</button>
-        <button class="opcao" data-correta="true">3,0 s</button>
-        <button class="opcao" data-correta="false">4,5 s</button>
-        <button class="opcao" data-correta="false">5,0 s</button>
+        <button class="opcao" data-correta="false">acelera a 0,5 m/s<sup>2</sup>.</button>
+        <button class="opcao" data-correta="true">ficará parada</button>
+        <button class="opcao" data-correta="false">acelera a 1 m/s<sup>2</sup>.</button>
+        <button class="opcao" data-correta="false">acelera a 1,5 m/s<sup>2</sup>.</button>
       </div>
       <button class="btn-resposta">Ver resposta</button>
       <div class="resposta-oculta">
-        <p>✅ <strong>3,0 s</strong> (usando t = √(2h/g))</p>
+        <p>✅ <strong>fica parada</strong> (usando 300N<326N)</p>
       </div>
     </div>
 
     <!-- PERGUNTA 2 -->
     <div class="pergunta-card">
       <span class="pergunta-numero">2</span>
-      <p>Qual a velocidade ao atingir o solo?</p>
+      <p>Se a força F formasse um ângulo de 53 graus, qual seria desta para acelerar a caixa?</p>
       
       <!-- FIGURA DA PERGUNTA 2 -->
-      <div class="figura-pergunta">
-        <img src="imagens/desafio1-q2.png" alt="Gráfico velocidade vs tempo" class="figura-pequena">
-        <!-- SE NÃO TIVER FIGURA, COMENTE A LINHA ACIMA E DESCOMENTE A LINHA ABAIXO -->
-        <!-- <p class="sem-figura">[Figura não disponível]</p> -->
-      </div>
+     <div class="figura-pergunta">
+
+    <!-- SE HOUVER FIGURA, DESCOMENTE A LINHA ABAIXO -->
+    <!--
+    <img src="imagens/desafio1-q1.png"
+         alt="Figura da questão"
+         class="figura-pequena">
+    -->
+
+    <!-- SE NÃO HOUVER FIGURA, UTILIZE A MENSAGEM ABAIXO -->
+    <p class="sem-figura">[Esta questão não possui figura]</p>
+
+</div>
       
       <div class="opcoes">
-        <button class="opcao" data-correta="false">20 m/s</button>
-        <button class="opcao" data-correta="true">30 m/s</button>
-        <button class="opcao" data-correta="false">45 m/s</button>
-        <button class="opcao" data-correta="false">60 m/s</button>
+        <button class="opcao" data-correta="false">298N</button>
+        <button class="opcao" data-correta="true">395N</button>
+        <button class="opcao" data-correta="false">451N</button>
+        <button class="opcao" data-correta="false">602N</button>
       </div>
       <button class="btn-resposta">Ver resposta</button>
       <div class="resposta-oculta">
@@ -92,20 +110,23 @@
     </div>
   </section>
 
-  <!-- VÍDEO DE APOIO COM LINK GOOGLE DRIVE -->
-  <section class="video-apoio">
-    <h3>🎬 Vídeo explicativo</h3>
-    <div class="video-wrapper">
-      <video class="video-player" controls muted playsinline>
-        <source src="https://media.githubusercontent.com/media/SEU-USUARIO/SEU-REPOSITORIO/main/VideoAula.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="video-link">
-      <a href="https://drive.google.com/SEU-LINK-DESAFIO1" target="_blank" class="btn-drive">
-        📹 Assistir no Google Drive (qualidade máxima)
-      </a>
-    </div>
-  </section>
+  <div class="video-pergunta">
+
+    <!-- VÍDEO DA QUESTÃO -->
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/h5T4DetnCWg"
+        title="Vídeo da questão"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+
+    <!-- SE NÃO HOUVER VÍDEO, COMENTE O IFRAME ACIMA E DESCOMENTE A LINHA ABAIXO -->
+    <!-- <p class="sem-video">[Esta questão não possui vídeo]</p> -->
+
+</div>
 
   <script src="script.js"></script>
 </body>
