@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Desafio 6 - Cinemática</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+  <div class="back-button">
+    <a href="index.html" class="btn-back">← Voltar</a>
+  </div>
+
+  <header class="desafio-header">
+    <div class="tema-box">
+      <span class="tema-label">Tema</span>
+      <h2>Cinemática</h2>
+    </div>
+    <div class="desafio-titulo">
+      <span class="badge-grande">Desafio 2</span>
+      <h1></h1>
+    </div>
+  </header>
+
+  <section class="enunciado">
+    <div class="enunciado-box">
+      <h3>📋 O problema</h3>
+      <p>
+        Uma viatura policial que faz segurança escolar está parada em frente a uma escola. 
+  Uma motocicleta passa pela viatura a 12m/s=45km/h mantendo essa velocidade constante. 
+  Como a velocidade máxima permitida na via é de 40km/h, então a viatura sai em perseguição a motocicleta, a partir do repouso, acelerando a 2m/s2, contudo 4s depois da motocicleta passar na frente da escola. 
+A maior distância entre a viatura e a motocicleta vale quanto?
+
+
+      </p>
+      
+      <div class="figura-container">
+        <img src="imagens/desafio6.jpg" alt="perseguição" class="figura-desafio">
+        <p class="legenda-figura">Figura 1: Imagem da erseguição.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="perguntas">
+    <div class="pergunta-card">
+      <span class="pergunta-numero">1</span>
+      <p>Em quanto tempo a viatura alcança a motocicleta?</p>
+      
+      <div class="figura-pergunta">
+        <img src="imagens/desafio2-q1.png" alt="sem figura" class="figura-pequena">
+        <!-- <p class="sem-figura">[Figura não disponível]</p> -->
+      </div>
+      
+      <div class="opcoes">
+        <button class="opcao" data-correta="false">25s</button>
+        <button class="opcao" data-correta="false">17,8s</button>
+        <button class="opcao" data-correta="true">19,17s</button>
+        <button class="opcao" data-correta="false">21,3s</button>
+      </div>
+      <button class="btn-resposta">Ver resposta</button>
+      <div class="resposta-oculta">
+        <p>✅ <strong>21,3</strong> (usando xm=xv)</p>
+      </div>
+    </div>
+
+    <div class="pergunta-card">
+      <span class="pergunta-numero">2</span>
+      <p>A que distância da escola ocorre o encontro?</p>
+      
+      <div class="figura-pergunta">
+        <img src="imagens/desafio2-q2.png" alt="sem figura" class="figura-pequena">
+        <!-- <p class="sem-figura">[Figura não disponível]</p> -->
+      </div>
+      
+      <div class="opcoes">
+        <button class="opcao" data-correta="false">20m</button>
+        <button class="opcao" data-correta="false">200m</button>
+        <button class="opcao" data-correta="true">230m</button>
+        <button class="opcao" data-correta="false">240m</button>
+      </div>
+      <button class="btn-resposta">Ver resposta</button>
+      <div class="resposta-oculta">
+        <p>✅ <strong>230m</strong> (usando xm=xv)</p>
+      </div>
+    </div>
+  </section>
+
+    <section class="video-apoio">
+    <h3>🎬 Vídeo explicativo</h3>
+    <div class="video-wrapper">
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/h5T4DetnCWg" 
+            title="Vídeo explicativo" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div class="video-link">
+        <a href="https://www.youtube.com/embed/h5T4DetnCWg" target="_blank" class="btn-drive">
+            📹 Assistir no YouTube (tela cheia)
+        </a>
+    </div>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
