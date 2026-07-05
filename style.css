@@ -464,3 +464,25 @@ footer {
   color: #AAA;
   margin-top: 4px;
 }
+/* ===== QUADRO PRETO DE CONTATO ===== */
+.contato-box {
+  background: #0A1128;
+  color: #fff;
+  padding: 16px 20px;
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.contato-box p {
+  margin: 4px 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.contato-box strong {
+  color: #F1C40F;
+  font-weight: 700;
+}
